@@ -1,0 +1,66 @@
+# CropSense AI — root .gitignore
+# (project-level patterns that apply to both backend and frontend)
+
+# ── Secrets ──────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── OS / Editor ──────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# ── Python ───────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ── Node ─────────────────────────────────────────────────────────────
+node_modules/
+
+# ── Local data / uploads ─────────────────────────────────────────────
+backend/data/uploads/
+
+# ── Reference material without established redistribution rights ──────
+# The guide mixes third-party extracted content; supply your own licensed
+# source and build the index locally (see README section 5.6).
+# NOTE: agricultural_guide.md is tracked so the deployed backend can serve it.
+# If you replace it with your own content, re-build the FAISS index.
+# backend/data/agricultural_guide.md
+
+# ── Command Code / tooling configuration ─────────────────────────────
+.commandcode/
+
+# ── Logs and temporary files ─────────────────────────────────────────
+*.log
+logs/
+
+# ── Local databases and backups ──────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+backups/
+
+# ── Python tooling caches ────────────────────────────────────────────
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ── Repository archives (may contain .env, .git, build output) ───────
+*.zip
+
+# ── Local audit / review artifacts (not published) ───────────────────
+reports/
+research/
+phase2e3_review_diff.txt
+
+# ── Local vector-store backups (derived artifacts) ───────────────────
+backend/data/vector_store_backup*/

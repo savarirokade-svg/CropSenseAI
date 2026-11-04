@@ -1,0 +1,26 @@
+# Local PostgreSQL for CropSenseAI.
+# Start with: docker compose --env-file backend/.env up -d
+# Credentials come from POSTGRES_USER / POSTGRES_PASSWORD in that env file.
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: cropsenseai-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: cropsense
+      POSTGRES_USER: ${POSTGRES_USER:?set POSTGRES_USER in backend/.env}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in backend/.env}
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - cropsense_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d cropsense"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+volumes:
+  cropsense_pgdata:

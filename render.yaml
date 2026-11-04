@@ -1,0 +1,48 @@
+services:
+  - type: web
+    name: cropsenseai-backend
+    runtime: python
+    region: oregon
+    plan: free
+
+    # ── Build ──────────────────────────────────────────────────────────────────
+    buildCommand: pip install -r requirements.txt
+
+    # ── Start ─────────────────────────────────────────────────────────────────
+    # Render injects $PORT; uvicorn must bind to 0.0.0.0 so the platform proxy
+    # can reach it. The backend directory is the working directory.
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+
+    # Working directory is the repo root by default; point Render at the backend.
+    rootDir: backend
+
+    # ── Persistent disk for image uploads ─────────────────────────────────────
+    # Free plan does not support persistent disks; upgrade to Starter ($7/mo)
+    # or use an external object store (see deployment docs).
+    # disk:
+    #   name: uploads
+    #   mountPath: /opt/render/project/src/data/uploads
+    #   sizeGB: 1
+
+    # ── Environment variables ──────────────────────────────────────────────────
+    # Set these in the Render dashboard (Environment tab). Never commit values.
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false          # enter value manually in Render dashboard
+
+      - key: ALLOWED_ORIGINS
+        sync: false          # e.g. https://your-app.vercel.app
+
+      - key: DATABASE_URL
+        sync: false          # paste the External Connection URL from your managed PostgreSQL
+
+      - key: SESSION_TTL_DAYS
+        value: "30"
+
+      - key: MAX_UPLOAD_BYTES
+        value: "10485760"
+
+      # UPLOADS_DIR: leave unset to use the default backend/data/uploads path.
+      # Set to an absolute path if you attach a persistent disk.
+      # - key: UPLOADS_DIR
+      #   value: /opt/render/project/src/data/uploads

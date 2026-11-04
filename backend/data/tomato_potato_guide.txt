@@ -1,0 +1,19 @@
+﻿DOCUMENT: Educational Guide to Tomato and Potato Leaf Symptoms
+
+SECTION 1: TOMATO LEAVES TURNING YELLOW
+Yellow tomato leaves can result from natural aging, overwatering, underwatering, nutrient deficiencies, root problems, or disease. Check soil moisture and drainage. Observe whether older or younger leaves are affected. Yellowing alone cannot confirm a specific disease.
+
+SECTION 2: TOMATO LEAVES WITH DARK SPOTS
+Dark or brown spots can have several causes, including fungal or bacterial diseases and environmental damage. Observe the shape of the spots, whether they spread, and whether yellow areas appear around them. Dark spots alone cannot confirm a disease.
+
+SECTION 3: POTATO LEAVES WITH BROWN OR DARK LESIONS
+Brown or dark lesions can be associated with early blight, late blight, other diseases, or environmental injury. Observe how quickly the symptoms develop and whether stems are affected. If symptoms spread rapidly, contact a local agricultural expert.
+
+SECTION 4: POTATO LEAVES TURNING YELLOW
+Yellow potato leaves can result from natural aging, water stress, nutrient problems, root damage, or disease. Check soil moisture, drainage, plant age, and whether other symptoms are present.
+
+SECTION 5: INFORMATION TO COLLECT
+Useful observations include crop type, plant age, affected leaves, spot shape and color, symptom spread, recent rainfall, watering practices, soil drainage, fertilizer use, and clear photographs.
+
+IMPORTANT NOTE
+This is sample educational content for testing CropSense AI. It is not an official agricultural publication. A crop diagnosis should consider multiple symptoms and growing conditions. When evidence is insufficient, ask for more information and consult a qualified agricultural expert.

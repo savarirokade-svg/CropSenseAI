@@ -1,0 +1,19 @@
+{
+  "embedding_model": "gemini-embedding-2",
+  "embedding_dimension": 768,
+  "num_chunks": 82,
+  "index_type": "IndexFlatIP",
+  "vector_dtype": "float32",
+  "similarity": "inner product on L2-normalized vectors (cosine)",
+  "source_knowledge_base": "agricultural_guide.md",
+  "source_knowledge_base_sha256": "17f765ea53083a351bc318a8cc6482345edd8bd94f0cd4b18ed33357c0753586",
+  "built_at": "2026-11-03T17:16:12+00:00",
+  "builder": "index_builder.py",
+  "indexed_parts": [
+    1
+  ],
+  "excluded_parts": [
+    2,
+    3
+  ]
+}

@@ -1,0 +1,52 @@
+# CropSenseAI backend dependencies
+# Generated from the project virtual environment.
+# Install with: pip install -r requirements.txt
+
+# ── Core framework ────────────────────────────────────────────────────────────
+fastapi==0.143.0
+starlette==1.8.0
+uvicorn==0.54.0
+
+# ── Google Gemini SDK ─────────────────────────────────────────────────────────
+google-genai==2.30.1
+
+# ── HTTP client (used internally by google-genai) ─────────────────────────────
+httpx==0.28.1
+httpcore==1.0.9
+h11==0.16.0
+
+# ── Data validation ───────────────────────────────────────────────────────────
+pydantic==2.14.1
+pydantic_core==2.50.1
+annotated-types==0.8.0
+
+# ── Environment / config ──────────────────────────────────────────────────────
+python-dotenv==1.2.4
+
+# ── File upload support ───────────────────────────────────────────────────────
+python-multipart==0.0.32
+
+# ── Async support ─────────────────────────────────────────────────────────────
+anyio==4.15.1
+sniffio==1.3.1
+
+# ── Typing backports ──────────────────────────────────────────────────────────
+typing_extensions==4.16.0
+
+# ── Vector search (FAISS) ─────────────────────────────────────────────────────
+faiss-cpu==1.15.1
+numpy>=1.26.0
+
+# ── Database ──────────────────────────────────────────────────────────────────
+sqlalchemy==2.1.6
+asyncpg==0.32.0
+alembic==1.20.1
+greenlet==3.5.6
+Mako==1.4.3
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+pytest==9.2.0
+pytest-asyncio==1.4.1
+iniconfig==2.3.1
+pluggy==1.7.0
+
